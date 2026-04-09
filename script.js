@@ -105,6 +105,8 @@ const finalWrap    = document.getElementById('intro-final');
 const introTitle   = document.getElementById('intro-title');
 const introNames   = document.getElementById('intro-names');
 const introBtn     = document.getElementById('intro-btn');
+const introOrnament = document.querySelector('.intro-ornament');
+const introTagline  = document.querySelector('.intro-tagline');
 
 function showMainSite() {
   introEl.classList.add('fade-out');
@@ -214,9 +216,14 @@ function showFinalMessage() {
   finalWrap.style.opacity = '1';
   finalWrap.style.pointerEvents = 'auto';
 
-  // Stagger: title → names → button
+  // Stagger: ornament → title → tagline → names → button
   requestAnimationFrame(() => {
+    if (introOrnament) introOrnament.classList.add('visible');
     introTitle.classList.add('visible');
+
+    setTimeout(() => {
+      if (introTagline) introTagline.classList.add('visible');
+    }, 800);
 
     setTimeout(() => {
       introNames.classList.add('visible');
