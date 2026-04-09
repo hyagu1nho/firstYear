@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Um ano de amor — Hyago &amp; Milena">
+  <title>Hyago &amp; Milena — 1 Ano de Nós</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     INTRO
+════════════════════════════════════════════════ -->
+<div id="intro" class="intro" role="presentation" aria-hidden="true">
+
+  <div id="intro-slideshow" class="intro-slideshow">
+    <img id="slideshow-img" src="" alt="" class="slideshow-img">
+    <div class="slideshow-vignette"></div>
+  </div>
+
+  <div id="intro-counter" class="intro-counter">
+    <span id="counter-num" class="counter-num">1</span>
+    <span class="counter-dias">dias</span>
+  </div>
+
+  <div id="intro-final" class="intro-final">
+    <h1 id="intro-title" class="intro-title">1 ano de nós</h1>
+    <p id="intro-names" class="intro-names">Hyago &amp; Milena</p>
+    <button id="intro-btn" class="intro-btn" aria-label="Entrar no site">
+      toque para continuar
+      <span class="intro-btn-arrow">↓</span>
+    </button>
+  </div>
+
+</div>
+
+<!-- ════════════════════════════════════════════════
+     SITE PRINCIPAL
+════════════════════════════════════════════════ -->
+<div id="main-site" class="main-site">
+
+  <!-- Cursor customizado (desktop) -->
+  <div id="custom-cursor" class="custom-cursor" aria-hidden="true">♥</div>
+
+  <!-- ─────────────────────────────────────────
+       HERO
+  ───────────────────────────────────────── -->
+  <section id="hero" class="hero" aria-label="Capa">
+    <div class="hero-bg-wrap" id="hero-bg-wrap">
+      <img
+        src="photos/IMG-20250215-WA0134(1).jpg"
+        alt="Hyago e Milena"
+        class="hero-bg-img"
+        id="hero-bg-img"
+      >
+      <div class="hero-overlay"></div>
+    </div>
+
+    <canvas id="canvas-petals" class="canvas-petals" aria-hidden="true"></canvas>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow">um ano de amor</span>
+      <h1 class="hero-names">Hyago <em class="hero-amp">&amp;</em> Milena</h1>
+      <p class="hero-since">desde <time class="hero-date">[DATA_INÍCIO]</time></p>
+
+      <div class="hero-counter" id="hero-counter" aria-label="Tempo juntos">
+        <div class="hc-block">
+          <span class="hc-num" id="hc-days">365</span>
+          <span class="hc-label">dias</span>
+        </div>
+        <span class="hc-colon" aria-hidden="true">:</span>
+        <div class="hc-block">
+          <span class="hc-num" id="hc-hours">00</span>
+          <span class="hc-label">horas</span>
+        </div>
+        <span class="hc-colon" aria-hidden="true">:</span>
+        <div class="hc-block">
+          <span class="hc-num" id="hc-mins">00</span>
+          <span class="hc-label">minutos</span>
+        </div>
+        <span class="hc-colon" aria-hidden="true">:</span>
+        <div class="hc-block">
+          <span class="hc-num" id="hc-secs">00</span>
+          <span class="hc-label">segundos</span>
+        </div>
+      </div>
+
+      <a href="#timeline" class="hero-scroll" aria-label="Rolar para baixo">↓</a>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       LINHA DO TEMPO
+  ───────────────────────────────────────── -->
+  <section id="timeline" class="timeline-section" aria-label="Linha do tempo">
+    <div class="section-head reveal">
+      <span class="section-tag">capítulos</span>
+      <h2 class="section-title">Nossa Linha do Tempo</h2>
+      <div class="section-rule" aria-hidden="true"></div>
+    </div>
+
+    <div class="timeline-track">
+
+      <div class="tl-item reveal" data-dir="right">
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <article class="tl-card">
+          <time class="tl-date">[MARCO_1_DATA]</time>
+          <h3 class="tl-title">[MARCO_1_TITULO]</h3>
+          <p class="tl-desc">[MARCO_1_DESCRICAO]</p>
+          <div class="tl-photo-wrap">
+            <img src="[MARCO_1_FOTO]" alt="[MARCO_1_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
+          </div>
+        </article>
+      </div>
+
+      <div class="tl-item reveal" data-dir="left">
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <article class="tl-card">
+          <time class="tl-date">[MARCO_2_DATA]</time>
+          <h3 class="tl-title">[MARCO_2_TITULO]</h3>
+          <p class="tl-desc">[MARCO_2_DESCRICAO]</p>
+          <div class="tl-photo-wrap">
+            <img src="[MARCO_2_FOTO]" alt="[MARCO_2_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
+          </div>
+        </article>
+      </div>
+
+      <div class="tl-item reveal" data-dir="right">
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <article class="tl-card">
+          <time class="tl-date">[MARCO_3_DATA]</time>
+          <h3 class="tl-title">[MARCO_3_TITULO]</h3>
+          <p class="tl-desc">[MARCO_3_DESCRICAO]</p>
+          <div class="tl-photo-wrap">
+            <img src="[MARCO_3_FOTO]" alt="[MARCO_3_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
+          </div>
+        </article>
+      </div>
+
+      <div class="tl-item reveal" data-dir="left">
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <article class="tl-card">
+          <time class="tl-date">[MARCO_4_DATA]</time>
+          <h3 class="tl-title">[MARCO_4_TITULO]</h3>
+          <p class="tl-desc">[MARCO_4_DESCRICAO]</p>
+          <div class="tl-photo-wrap">
+            <img src="[MARCO_4_FOTO]" alt="[MARCO_4_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
+          </div>
+        </article>
+      </div>
+
+      <div class="tl-item reveal" data-dir="right">
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <article class="tl-card">
+          <time class="tl-date">[MARCO_5_DATA]</time>
+          <h3 class="tl-title">[MARCO_5_TITULO]</h3>
+          <p class="tl-desc">[MARCO_5_DESCRICAO]</p>
+          <div class="tl-photo-wrap">
+            <img src="[MARCO_5_FOTO]" alt="[MARCO_5_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
+          </div>
+        </article>
+      </div>
+
+      <div class="tl-item reveal" data-dir="left">
+        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+        <article class="tl-card">
+          <time class="tl-date">[MARCO_6_DATA]</time>
+          <h3 class="tl-title">[MARCO_6_TITULO]</h3>
+          <p class="tl-desc">[MARCO_6_DESCRICAO]</p>
+          <div class="tl-photo-wrap">
+            <img src="[MARCO_6_FOTO]" alt="[MARCO_6_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       GALERIA DE MEMÓRIAS
+  ───────────────────────────────────────── -->
+  <section id="gallery" class="gallery-section" aria-label="Galeria de memórias">
+    <div class="section-head reveal">
+      <span class="section-tag">memórias</span>
+      <h2 class="section-title">Galeria de Memórias</h2>
+      <div class="section-rule" aria-hidden="true"></div>
+    </div>
+
+    <!-- Bloco 1 — Fevereiro 2025 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_1_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_1_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="0">
+        <div class="gallery-item" data-src="photos/IMG-20250215-WA0134(1).jpg"><img src="photos/IMG-20250215-WA0134(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250215-WA0141.jpg"><img src="photos/IMG-20250215-WA0141.jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250221-WA0074(1).jpg"><img src="photos/IMG-20250221-WA0074(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250222-WA0072(1).jpg"><img src="photos/IMG-20250222-WA0072(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250222-WA0082(1).jpg"><img src="photos/IMG-20250222-WA0082(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250222-WA0121(1).jpg"><img src="photos/IMG-20250222-WA0121(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 2 — Fevereiro/Março 2025 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_2_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_2_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="1">
+        <div class="gallery-item" data-src="photos/IMG-20250222-WA0139(1).jpg"><img src="photos/IMG-20250222-WA0139(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250222-WA0141(1).jpg"><img src="photos/IMG-20250222-WA0141(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250222-WA0146.jpg"><img src="photos/IMG-20250222-WA0146.jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250301-WA0077(1).jpg"><img src="photos/IMG-20250301-WA0077(1).jpg" alt="Março 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250302-WA0033(2).jpg"><img src="photos/IMG-20250302-WA0033(2).jpg" alt="Março 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250302-WA0042(2).jpg"><img src="photos/IMG-20250302-WA0042(2).jpg" alt="Março 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 3 — Março/Abril 2025 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_3_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_3_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="2">
+        <div class="gallery-item" data-src="photos/IMG-20250302-WA0043(1).jpg"><img src="photos/IMG-20250302-WA0043(1).jpg" alt="Março 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250321-WA0021(2).jpg"><img src="photos/IMG-20250321-WA0021(2).jpg" alt="Março 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250406-WA0018(1).jpg"><img src="photos/IMG-20250406-WA0018(1).jpg" alt="Abril 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250424-WA0092.jpg"><img src="photos/IMG-20250424-WA0092.jpg" alt="Abril 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250504-WA0024(2).jpg"><img src="photos/IMG-20250504-WA0024(2).jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250504-WA0032.jpg"><img src="photos/IMG-20250504-WA0032.jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 4 — Maio 2025 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_4_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_4_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="3">
+        <div class="gallery-item" data-src="photos/IMG-20250504-WA0033(1).jpg"><img src="photos/IMG-20250504-WA0033(1).jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250504-WA0042.jpg"><img src="photos/IMG-20250504-WA0042.jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250504-WA0045.jpg"><img src="photos/IMG-20250504-WA0045.jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250504-WA0052.jpg"><img src="photos/IMG-20250504-WA0052.jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250505-WA0029.jpg"><img src="photos/IMG-20250505-WA0029.jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250505-WA0033(3).jpg"><img src="photos/IMG-20250505-WA0033(3).jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 5 — Junho/Julho/Agosto 2025 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_5_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_5_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="4">
+        <div class="gallery-item" data-src="photos/IMG-20250506-WA0071(1).jpg"><img src="photos/IMG-20250506-WA0071(1).jpg" alt="Maio 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250608-WA0058(1).jpg"><img src="photos/IMG-20250608-WA0058(1).jpg" alt="Junho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250608-WA0061(3).jpg"><img src="photos/IMG-20250608-WA0061(3).jpg" alt="Junho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250615-WA0001.jpg"><img src="photos/IMG-20250615-WA0001.jpg" alt="Junho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250615-WA0050.jpg"><img src="photos/IMG-20250615-WA0050.jpg" alt="Junho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250619-WA0060.jpg"><img src="photos/IMG-20250619-WA0060.jpg" alt="Junho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 6 — Julho/Agosto 2025 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_6_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_6_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="5">
+        <div class="gallery-item" data-src="photos/IMG-20250720-WA0032(1).jpg"><img src="photos/IMG-20250720-WA0032(1).jpg" alt="Julho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250720-WA0033.jpg"><img src="photos/IMG-20250720-WA0033.jpg" alt="Julho 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250820-WA0019(2).jpg"><img src="photos/IMG-20250820-WA0019(2).jpg" alt="Agosto 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250824-WA0057(2).jpg"><img src="photos/IMG-20250824-WA0057(2).jpg" alt="Agosto 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20251118-WA0091(2).jpg"><img src="photos/IMG-20251118-WA0091(2).jpg" alt="Novembro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20251118-WA0093(2).jpg"><img src="photos/IMG-20251118-WA0093(2).jpg" alt="Novembro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 7 — Novembro 2025 / Janeiro 2026 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_7_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_7_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="6">
+        <div class="gallery-item" data-src="photos/IMG-20251118-WA0095(2).jpg"><img src="photos/IMG-20251118-WA0095(2).jpg" alt="Novembro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20251118-WA0098(2).jpg"><img src="photos/IMG-20251118-WA0098(2).jpg" alt="Novembro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260118-WA0274.jpg"><img src="photos/IMG-20260118-WA0274.jpg" alt="Janeiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260118-WA0318.jpg"><img src="photos/IMG-20260118-WA0318.jpg" alt="Janeiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260118-WA0345(1).jpg"><img src="photos/IMG-20260118-WA0345(1).jpg" alt="Janeiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260118-WA0379.jpg"><img src="photos/IMG-20260118-WA0379.jpg" alt="Janeiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 8 — Fevereiro 2026 -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_8_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_8_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="7">
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0125.jpg"><img src="photos/IMG-20260222-WA0125.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0188.jpg"><img src="photos/IMG-20260222-WA0188.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0198.jpg"><img src="photos/IMG-20260222-WA0198.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0200.jpg"><img src="photos/IMG-20260222-WA0200.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0201.jpg"><img src="photos/IMG-20260222-WA0201.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0209.jpg"><img src="photos/IMG-20260222-WA0209.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+    <!-- Bloco 9 — Março/Abril 2026 (Aniversário) -->
+    <div class="gallery-block reveal">
+      <div class="gallery-block-header">
+        <h3 class="gallery-block-title">[BLOCO_9_TITULO]</h3>
+        <p class="gallery-block-caption">[BLOCO_9_LEGENDA]</p>
+      </div>
+      <div class="gallery-grid" data-block="8">
+        <div class="gallery-item" data-src="photos/IMG-20260222-WA0219.jpg"><img src="photos/IMG-20260222-WA0219.jpg" alt="Fevereiro 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260329-WA0081.jpg"><img src="photos/IMG-20260329-WA0081.jpg" alt="Março 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260408-WA0075.jpg"><img src="photos/IMG-20260408-WA0075.jpg" alt="Abril 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260408-WA0098.jpg"><img src="photos/IMG-20260408-WA0098.jpg" alt="Abril 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260408-WA0112.jpg"><img src="photos/IMG-20260408-WA0112.jpg" alt="Abril 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20260408-WA0114.jpg"><img src="photos/IMG-20260408-WA0114.jpg" alt="Abril 2026" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       CARTA
+  ───────────────────────────────────────── -->
+  <section id="letter" class="letter-section" aria-label="Carta para Milena">
+    <div class="letter-paper">
+      <div class="letter-inner">
+        <div class="letter-deco" aria-hidden="true">— ✦ —</div>
+        <h2 class="letter-heading">Para Milena,</h2>
+        <div class="letter-body" id="letter-body">
+          <p class="letter-line">[MENSAGEM_LINHA_1]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_2]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_3]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_4]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_5]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_6]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_7]</p>
+          <p class="letter-line">[MENSAGEM_LINHA_8]</p>
+        </div>
+        <p class="letter-signature">Com amor, Hyago</p>
+        <div class="letter-deco" aria-hidden="true">— ✦ —</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
+       CONTADOR AO VIVO (SEÇÃO)
+  ───────────────────────────────────────── -->
+  <section id="counter" class="counter-section" aria-label="Tempo juntos">
+    <div class="section-head reveal">
+      <span class="section-tag">cada segundo</span>
+      <h2 class="section-title">Cada Segundo Conta</h2>
+      <div class="section-rule" aria-hidden="true"></div>
+    </div>
+
+    <div class="big-counter reveal" id="big-counter">
+      <div class="bc-unit">
+        <div class="bc-drum">
+          <span class="bc-val" id="bc-days">365</span>
+        </div>
+        <span class="bc-label">dias</span>
+      </div>
+      <span class="bc-colon" aria-hidden="true">:</span>
+      <div class="bc-unit">
+        <div class="bc-drum">
+          <span class="bc-val" id="bc-hours">00</span>
+        </div>
+        <span class="bc-label">horas</span>
+      </div>
+      <span class="bc-colon" aria-hidden="true">:</span>
+      <div class="bc-unit">
+        <div class="bc-drum">
+          <span class="bc-val" id="bc-mins">00</span>
+        </div>
+        <span class="bc-label">minutos</span>
+      </div>
+      <span class="bc-colon" aria-hidden="true">:</span>
+      <div class="bc-unit">
+        <div class="bc-drum">
+          <span class="bc-val" id="bc-secs">00</span>
+        </div>
+        <span class="bc-label">segundos</span>
+      </div>
+    </div>
+
+    <p class="counter-legend reveal">
+      juntos desde <time id="counter-date">[DATA_INÍCIO]</time>
+    </p>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <p class="footer-names">Hyago &amp; Milena</p>
+    <p class="footer-sub">feito com amor ♥ · 1 ano de nós</p>
+  </footer>
+
+</div><!-- /main-site -->
+
+<!-- ════════════════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════════════════ -->
+<div id="lightbox" class="lightbox" role="dialog" aria-label="Visualizar foto" aria-modal="true" hidden>
+  <div class="lb-backdrop" id="lb-backdrop"></div>
+  <div class="lb-container">
+    <button class="lb-close" id="lb-close" aria-label="Fechar">✕</button>
+    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Foto anterior">‹</button>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="" class="lb-img">
+    </div>
+    <button class="lb-nav lb-next" id="lb-next" aria-label="Próxima foto">›</button>
+    <p class="lb-counter" id="lb-counter" aria-live="polite"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
