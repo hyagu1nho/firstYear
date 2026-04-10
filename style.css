@@ -238,21 +238,24 @@ a { cursor: none; }
   animation: shimmer 5s linear infinite paused;
 }
 
-@supports (-webkit-background-clip: text) or (background-clip: text) {
-  .intro-title {
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(
-      135deg,
-      #e8d5a3 0%,
-      #C9A84C 30%,
-      #FAF0E6 52%,
-      #C9A84C 72%,
-      #e8d5a3 100%
-    );
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
+/* Gradiente animado apenas em desktop (pointer: fine = mouse) */
+@media (pointer: fine) {
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .intro-title {
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+      background: linear-gradient(
+        135deg,
+        #e8d5a3 0%,
+        #C9A84C 30%,
+        #FAF0E6 52%,
+        #C9A84C 72%,
+        #e8d5a3 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
   }
 }
 
