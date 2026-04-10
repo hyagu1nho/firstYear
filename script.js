@@ -17,6 +17,9 @@ const CONFIG = {
    FOTOS (ordem cronológica)
 ═══════════════════════════════════════════════════ */
 const ALL_PHOTOS = [
+  'photos/IMG-20250412-WA0005.jpg',
+  'photos/IMG-20250419-WA0077(4).jpg',
+  'photos/IMG-20250419-WA0079.jpg',
   'photos/IMG-20250215-WA0134(1).jpg',
   'photos/IMG-20250215-WA0141.jpg',
   'photos/IMG-20250221-WA0074(1).jpg',
@@ -84,6 +87,11 @@ function easeInOutCubic(t) {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
+// Easing dramático: arranca devagar, acelera no meio, desacelera no final
+function easeInOutQuint(t) {
+  return t < 0.5 ? 16 * t * t * t * t * t : 1 - Math.pow(-2 * t + 2, 5) / 2;
+}
+
 function easeOutExpo(t) {
   return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 }
@@ -127,6 +135,7 @@ function initIntro() {
   });
 
   introBtn.addEventListener('click', showMainSite);
+  initMusic();
 }
 
 function preloadPhotos(photos) {
@@ -192,7 +201,7 @@ function runCounter() {
     function tick(now) {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      const eased = easeInOutCubic(progress);
+      const eased = easeInOutQuint(progress);
       const value = Math.round(1 + eased * 364);
       counterNum.textContent = value;
 
@@ -644,6 +653,48 @@ function initScrollHintFade() {
     hint.style.opacity = window.scrollY > 60 ? '0' : '';
     hint.style.transition = 'opacity 0.4s ease';
   }, { passive: true });
+}
+
+/* ═══════════════════════════════════════════════════
+   MÚSICA
+═══════════════════════════════════════════════════ */
+function initMusic() {
+  const audio = document.getElementById('bg-music');
+  const btn   = document.getElementById('music-btn');
+  if (!audio || !btn) return;
+
+  audio.volume = 0;
+  let started = false;
+
+  function startMusic() {
+    if (started) return;
+    started = true;
+    audio.play().then(() => {
+      btn.classList.add('visible');
+      let v = 0;
+      const fade = setInterval(() => {
+        v = Math.min(v + 0.02, 0.5);
+        audio.volume = v;
+        if (v >= 0.5) clearInterval(fade);
+      }, 120);
+    }).catch(() => {});
+  }
+
+  // Inicia no primeiro toque/clique do usuário
+  ['touchstart', 'mousedown', 'keydown'].forEach(evt => {
+    document.addEventListener(evt, startMusic, { once: true });
+  });
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      audio.volume = 0.5;
+      btn.classList.remove('muted');
+    } else {
+      audio.pause();
+      btn.classList.add('muted');
+    }
+  });
 }
 
 /* ═══════════════════════════════════════════════════

@@ -52,6 +52,10 @@
   <!-- Cursor customizado (desktop) -->
   <div id="custom-cursor" class="custom-cursor" aria-hidden="true">♥</div>
 
+  <!-- Player de música -->
+  <audio id="bg-music" src="music.mp3" loop preload="auto"></audio>
+  <button id="music-btn" class="music-btn" aria-label="Pausar música">♪</button>
+
   <!-- ─────────────────────────────────────────
        HERO
   ───────────────────────────────────────── -->
@@ -95,94 +99,7 @@
         </div>
       </div>
 
-      <a href="#timeline" class="hero-scroll" aria-label="Rolar para baixo">↓</a>
-    </div>
-  </section>
-
-  <!-- ─────────────────────────────────────────
-       LINHA DO TEMPO
-  ───────────────────────────────────────── -->
-  <section id="timeline" class="timeline-section" aria-label="Linha do tempo">
-    <div class="section-head reveal">
-      <span class="section-tag">capítulos</span>
-      <h2 class="section-title">Nossa linha do tempo</h2>
-      <div class="section-rule" aria-hidden="true"></div>
-    </div>
-
-    <div class="timeline-track">
-
-      <div class="tl-item reveal" data-dir="right">
-        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-        <article class="tl-card">
-          <time class="tl-date">[MARCO_1_DATA]</time>
-          <h3 class="tl-title">[MARCO_1_TITULO]</h3>
-          <p class="tl-desc">[MARCO_1_DESCRICAO]</p>
-          <div class="tl-photo-wrap">
-            <img src="[MARCO_1_FOTO]" alt="[MARCO_1_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
-          </div>
-        </article>
-      </div>
-
-      <div class="tl-item reveal" data-dir="left">
-        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-        <article class="tl-card">
-          <time class="tl-date">[MARCO_2_DATA]</time>
-          <h3 class="tl-title">[MARCO_2_TITULO]</h3>
-          <p class="tl-desc">[MARCO_2_DESCRICAO]</p>
-          <div class="tl-photo-wrap">
-            <img src="[MARCO_2_FOTO]" alt="[MARCO_2_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
-          </div>
-        </article>
-      </div>
-
-      <div class="tl-item reveal" data-dir="right">
-        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-        <article class="tl-card">
-          <time class="tl-date">[MARCO_3_DATA]</time>
-          <h3 class="tl-title">[MARCO_3_TITULO]</h3>
-          <p class="tl-desc">[MARCO_3_DESCRICAO]</p>
-          <div class="tl-photo-wrap">
-            <img src="[MARCO_3_FOTO]" alt="[MARCO_3_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
-          </div>
-        </article>
-      </div>
-
-      <div class="tl-item reveal" data-dir="left">
-        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-        <article class="tl-card">
-          <time class="tl-date">[MARCO_4_DATA]</time>
-          <h3 class="tl-title">[MARCO_4_TITULO]</h3>
-          <p class="tl-desc">[MARCO_4_DESCRICAO]</p>
-          <div class="tl-photo-wrap">
-            <img src="[MARCO_4_FOTO]" alt="[MARCO_4_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
-          </div>
-        </article>
-      </div>
-
-      <div class="tl-item reveal" data-dir="right">
-        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-        <article class="tl-card">
-          <time class="tl-date">[MARCO_5_DATA]</time>
-          <h3 class="tl-title">[MARCO_5_TITULO]</h3>
-          <p class="tl-desc">[MARCO_5_DESCRICAO]</p>
-          <div class="tl-photo-wrap">
-            <img src="[MARCO_5_FOTO]" alt="[MARCO_5_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
-          </div>
-        </article>
-      </div>
-
-      <div class="tl-item reveal" data-dir="left">
-        <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
-        <article class="tl-card">
-          <time class="tl-date">[MARCO_6_DATA]</time>
-          <h3 class="tl-title">[MARCO_6_TITULO]</h3>
-          <p class="tl-desc">[MARCO_6_DESCRICAO]</p>
-          <div class="tl-photo-wrap">
-            <img src="[MARCO_6_FOTO]" alt="[MARCO_6_TITULO]" loading="lazy" class="tl-photo" onerror="this.parentElement.style.display='none'">
-          </div>
-        </article>
-      </div>
-
+      <a href="#gallery" class="hero-scroll" aria-label="Rolar para baixo">↓</a>
     </div>
   </section>
 
@@ -203,6 +120,9 @@
         <p class="gallery-block-caption">onde tudo começou</p>
       </div>
       <div class="gallery-grid" data-block="0">
+        <div class="gallery-item" data-src="photos/IMG-20250412-WA0005.jpg"><img src="photos/IMG-20250412-WA0005.jpg" alt="Pedido de namoro" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250419-WA0077(4).jpg"><img src="photos/IMG-20250419-WA0077(4).jpg" alt="Pedido de namoro" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
+        <div class="gallery-item" data-src="photos/IMG-20250419-WA0079.jpg"><img src="photos/IMG-20250419-WA0079.jpg" alt="Pedido de namoro" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
         <div class="gallery-item" data-src="photos/IMG-20250215-WA0134(1).jpg"><img src="photos/IMG-20250215-WA0134(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
         <div class="gallery-item" data-src="photos/IMG-20250215-WA0141.jpg"><img src="photos/IMG-20250215-WA0141.jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
         <div class="gallery-item" data-src="photos/IMG-20250221-WA0074(1).jpg"><img src="photos/IMG-20250221-WA0074(1).jpg" alt="Fevereiro 2025" loading="lazy" class="gallery-img"><div class="gallery-hover" aria-hidden="true"></div></div>
@@ -343,6 +263,29 @@
   </section>
 
   <!-- ─────────────────────────────────────────
+       VÍDEO
+  ───────────────────────────────────────── -->
+  <section class="video-section" aria-label="Momento especial">
+    <div class="section-head reveal">
+      <span class="section-tag">em movimento</span>
+      <h2 class="section-title">A gente assim</h2>
+      <div class="section-rule" aria-hidden="true"></div>
+    </div>
+    <div class="video-wrap reveal">
+      <video
+        src="photos/VID-20250505-WA0039.mp4"
+        class="feature-video"
+        controls
+        playsinline
+        preload="metadata"
+        muted
+        aria-label="Cambalhota juntos"
+      ></video>
+      <p class="video-caption">05 de maio de 2025</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────
        CARTA
   ───────────────────────────────────────── -->
   <section id="letter" class="letter-section" aria-label="Carta para Milena">
@@ -351,14 +294,14 @@
         <div class="letter-deco" aria-hidden="true">— ✦ —</div>
         <h2 class="letter-heading">Para Milena,</h2>
         <div class="letter-body" id="letter-body">
-          <p class="letter-line">[MENSAGEM_LINHA_1]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_2]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_3]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_4]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_5]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_6]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_7]</p>
-          <p class="letter-line">[MENSAGEM_LINHA_8]</p>
+          <p class="letter-line">1 ano já, meu amor. Como o tempo passa, hein?</p>
+          <p class="letter-line">Foi um ano diferente de tudo que eu já vivi. Aprendendo a conviver com alguém, a dividir momentos, a ser eu mesmo sem medo — e tudo isso ao seu lado.</p>
+          <p class="letter-line">Você é daquelas pessoas que alegram o ambiente só de chegar. Que fazem o dia ficar mais leve sem nem perceber. Que são luz, do jeito mais genuíno que essa palavra pode ter.</p>
+          <p class="letter-line">Teve dia difícil, teve dia que a vida pesou — mas ter você tornou tudo mais fácil de atravessar. É estranho como alguém pode fazer tanto bem só existindo.</p>
+          <p class="letter-line">Obrigado por cada risada, por cada viagem, por cada momento besta que a gente transformou em memória boa. Por cada vez que você ficou, mesmo quando não precisava.</p>
+          <p class="letter-line">Esse site é pequeno pra guardar tudo que você significa, mas é o jeito que encontrei de tentar.</p>
+          <p class="letter-line">Que venham mais anos assim, e melhores ainda.</p>
+          <p class="letter-line">Eu te amo muito, minha princesa!</p>
         </div>
         <p class="letter-signature">Com amor, Hyago</p>
         <div class="letter-deco" aria-hidden="true">— ✦ —</div>
