@@ -4,7 +4,7 @@
 const CONFIG = {
   // Data e hora de início do namoro (formato ISO 8601)
   // Exemplo: '2025-04-09T18:30:00'
-  START_DATE: new Date('[DATA_INÍCIO]'), // ← substitua [DATA_INÍCIO] pela data real
+  START_DATE: new Date('2025-04-11T00:00:00-03:00'), // 11/04/2025 meia-noite, horário de Brasília
 
   // Duração de cada foto no slideshow (em ms)
   SLIDE_DURATION: 95,
